@@ -1,0 +1,227 @@
+/* Body Styling */
+body {
+  background-color: #f4f6f7; /* Light gray background color */
+  font-family: "Plus Jakarta Sans", sans-serif !important; /* Set font to Plus Jakarta Sans */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Align items in a column */
+  min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+}
+
+/* Navbar Styling */
+.navbar {
+  margin-bottom: 20px; /* Space below the navbar */
+  background-color: white !important; /* Force white background */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+}
+
+.nav-item {
+  margin: 0 15px; /* Add spacing between navigation items */
+}
+
+.nav-link {
+  font-size: 1.1rem; /* Increase font size for navbar links */
+  position: relative; /* Positioning for active link effect */
+}
+
+/* Active Navbar Link Styling */
+.nav-link.active::after {
+  content: ''; /* Empty content for the underline effect */
+  position: absolute; /* Absolute positioning of the underline */
+  bottom: -5px; /* Position it 5px below the link */
+  left: 0; /* Align it to the left of the link */
+  width: 100%; /* Make it span the full width of the link */
+  height: 2px; /* Set height of the underline */
+  background-color: #3498db; /* Changed to blue since background is now white */
+}
+
+/* Card Styles (for listings) */
+.card {
+  border: none !important; /* Remove border around cards */
+  margin-bottom: 2rem; /* Add bottom margin to cards */
+}
+
+/* Image Styling Inside Cards */
+.card-img-top {
+  border-radius: 1rem !important; /* Round the corners of the image */
+  width: 100% !important; /* Ensure the image takes up the full width of the card */
+  object-fit: cover !important; /* Crop and scale the image to cover the area */
+}
+
+.card-body {
+  padding: 0% !important; /* Remove padding inside card body */
+}
+
+.card-text p {
+  font-weight: 400 !important; /* Set font weight to normal */
+}
+
+.listing-link {
+  text-decoration: none !important; /* Remove underline from the links */
+}
+
+/* Hover Effect for Image Overlay in Cards */
+.card-img-overlay {
+  opacity: 0; /* Initially make the overlay invisible */
+}
+
+.card-img-overlay:hover {
+  opacity: .2; /* Make the overlay slightly visible on hover */
+  background-color: #f4f6f7; /* Set background color to light gray */
+}
+
+/* Show Image Section for Specific Listings */
+.show-image {
+  height: 30vh; /* Set the height of the image section */
+}
+
+/* Container and Row Styling */
+.row {
+  max-width: 1200px; /* Set maximum width for rows */
+  margin: 2rem auto; /* Center rows with margin */
+}
+
+.col-8.offset-2 {
+  padding: 0 15px; /* Add padding inside columns */
+}
+
+/* Header Styling for Listings */
+.listing-header {
+  color: #2c3e50; /* Dark color for the header */
+  margin-bottom: 2rem; /* Margin below the header */
+  font-size: 1.8rem; /* Larger font size for headers */
+  border-bottom: 2px solid #3498db; /* Blue bottom border */
+  padding-bottom: 0.5rem; /* Padding at the bottom */
+}
+
+/* Styling for Listing Cards */
+.listing-card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow around cards */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow of content */
+}
+
+/* Styling for Listing Images */
+.listing-image {
+  height: 400px; /* Fixed height for listing images */
+  object-fit: cover; /* Ensure image covers the area */
+  border-bottom: 3px solid #3498db; /* Blue border at the bottom of the image */
+}
+
+/* Listing Details Styling */
+.listing-details {
+  list-style: none; /* Remove bullet points from list */
+  padding: 0; /* Remove padding */
+  margin: 1.5rem 0; /* Margin for spacing between details */
+}
+
+.detail-item {
+  margin-bottom: 1rem; /* Space between detail items */
+  padding: 0.8rem; /* Padding inside each detail item */
+  background-color: #f8f9fa; /* Light gray background for each detail item */
+  border-radius: 5px; /* Rounded corners for detail items */
+}
+
+.detail-label {
+  display: block; /* Display label as a block element */
+  font-weight: 600; /* Make label bold */
+  color: #3498db; /* Blue color for labels */
+  margin-bottom: 0.3rem; /* Space below the label */
+}
+
+/* Action Buttons for Editing and Deleting Listings */
+.action-buttons {
+  margin-top: 2rem; /* Add space above the action buttons */
+  display: flex; /* Use flexbox for aligning buttons */
+  gap: 1rem; /* Add gap between buttons */
+}
+
+/* Edit Button Styling */
+.btn-edit {
+  background-color: #3498db; /* Blue background for edit button */
+  color: white; /* White text */
+  padding: 0.6rem 1.2rem; /* Padding inside the button */
+  text-decoration: none; /* Remove text decoration */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Delete Button Styling */
+.btn-delete {
+  background-color: #e74c3c; /* Red background for delete button */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  padding: 0.6rem 1.2rem; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover Effect for Edit Button */
+.btn-edit:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Hover Effect for Delete Button */
+.btn-delete:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #343a40; /* Dark background for footer */
+  color: white; /* White text */
+  padding: 10px 0; /* Reduce padding (top and bottom) */
+  font-size: 0.9rem; /* Smaller font size */
+  text-align: center; /* Center text */
+  margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+/* Social Media Icon Styles in Footer */
+footer .f-info-socials i {
+  color: white; /* White color for icons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  margin: 0 10px; /* Space between icons */
+}
+
+footer .f-info-socials i:hover {
+  color: #3498db; /* Blue color on hover */
+}
+
+/* Brand Info in Footer */
+footer .f-info-brand {
+  font-size: 0.8rem; /* Smaller font size for brand info */
+  margin-bottom: 0.5rem; /* Reduced margin below brand info */
+}
+
+/* Footer Links Styling */
+footer .f-info-links a {
+  color: white; /* White color for footer links */
+  text-decoration: none; /* Remove underline */
+  margin: 0 10px; /* Space between the links */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+footer .f-info-links a:hover {
+  color: #3498db; /* Blue color on hover */
+}
+
+/* Footer Container Styling */
+footer .container {
+  display: flex; /* Use flexbox for the footer content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack items vertically */
+  padding: 0 15px; /* Adjust padding inside the container */
+}
+
+/* Footer Row Styling */
+footer .row {
+  width: 100%; /* Make the row take up the full width */
+  text-align: center; /* Center text inside the row */
+}
+
+/* Footer Links Section Styling */
+footer .f-info-links {
+  margin-top: 0.5rem; /* Reduced margin above the links section */
+}
