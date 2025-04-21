@@ -1,6 +1,3 @@
-Thanks for sharing that info! Based on your repository **ShyamMohanvis/NamasteStay**, here’s a customized and professional `README.md` for your project — complete with tech stack, features, structure, and more.
-
----
 
 # 🏨 NamasteStay
 
@@ -86,13 +83,13 @@ NamasteStay/
 
 ## 📸 Screenshots
 
-> 1:https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%20%201.png
+1. ![Screenshot 1](https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%20%201.png?raw=true)
 
-> 2:https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%202.png
+2. ![Screenshot 2](https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%202.png?raw=true)
 
-> 3:https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%203.png
+3. ![Screenshot 3](https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%203.png?raw=true)
 
-> 4:https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%204.png
+4. ![Screenshot 4](https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%204.png?raw=true)
 
 
 
