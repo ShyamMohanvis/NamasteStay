@@ -1,5 +1,14 @@
 const Listing = require("../models/listing");
 
+/** Normalize multer file to { url, filename } for Cloudinary URL or local /uploads/... */
+function imageFromUpload(file) {
+  if (!file) return null;
+  if (typeof file.path === "string" && file.path.startsWith("http")) {
+    return { url: file.path, filename: file.filename };
+  }
+  return { url: `/uploads/${file.filename}`, filename: file.filename };
+}
+
 module.exports.index = async (req, res) => {
 const allListings = await Listing.find({});
 res.render("listings/index.ejs", { allListings });
@@ -26,11 +35,14 @@ module.exports.showListing = async (req, res) => {
   };
 
   module.exports.createListing = async (req, res) => {
-        let url =req.file.path;
-        let filename =req.file.filename;
+        if (!req.file) {
+          req.flash("error", "Please choose an image to upload.");
+          return res.redirect("/listings/new");
+        }
+        const img = imageFromUpload(req.file);
         const newListing = new Listing(req.body.listing);
         newListing.owner=req.user._id;
-        newListing.image ={url,filename};
+        newListing.image = { url: img.url, filename: img.filename };
         await newListing.save();
         req.flash("success","New Listing Created!");
         res.redirect("/listings");
@@ -46,7 +58,9 @@ module.exports.showListing = async (req, res) => {
         }
 
         let originalImageUrl = listing.image.url;
-        originalImageUrl = originalImageUrl.replace("/upload", "/upload/w_250");
+        if (typeof originalImageUrl === "string" && originalImageUrl.includes("cloudinary.com")) {
+          originalImageUrl = originalImageUrl.replace("/upload", "/upload/w_250");
+        }
         res.render("listings/edit.ejs", { listing ,originalImageUrl});
       };
       
@@ -56,9 +70,8 @@ module.exports.showListing = async (req, res) => {
     let listing = await Listing.findByIdAndUpdate(id, { ...req.body.listing });
   
     if (typeof req.file !== "undefined") {
-      let url = req.file.path;
-      let filename = req.file.filename;
-      listing.image = { url, filename };
+      const img = imageFromUpload(req.file);
+      listing.image = { url: img.url, filename: img.filename };
       await listing.save();
     }
   

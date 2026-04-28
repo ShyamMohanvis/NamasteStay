@@ -1,87 +1,75 @@
+# NamasteStay
 
-# 🏨 NamasteStay
+**NamasteStay** is a full-stack **accommodation listing** web app: browse stays, create listings with photos, and leave reviews. Pages are rendered on the server with **EJS** (not a separate React frontend).
 
-**NamasteStay** is a full-stack hotel listing web application, designed to help users discover accommodations in various cities across the globe. Whether you’re planning a vacation or a quick getaway, NamasteStay makes finding your stay easy and intuitive.
-
-🌐 Live: [namastestay.onrender.com/listings](https://namastestay.onrender.com/listings)
-
----
-
-## 🚧 Project Overview
-
-- 🛠️ **Built using the MERN stack**
-- ✈️ **Hotel listings for travel planning**
-- 📦 Follows **MVC architecture** for clean and scalable code
-- 🔁 RESTful APIs + AJAX for seamless UX
-- 📷 Image upload and cloud storage integration
-- 🎨 Responsive UI using Bootstrap
+**Live:** [namastestay.onrender.com/listings](https://namastestay.onrender.com/listings)
 
 ---
 
-## ⚙️ Tech Stack
+## Quick start
 
-### 🧩 Frontend
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **EJS Templating**
-- **Bootstrap**
+1. **Requirements:** Node.js 20.x, MongoDB (e.g. Atlas), Cloudinary account for images.
 
-### 🔧 Backend
-- **Node.js**
-- **Express.js**
+2. **Install**
 
-### 💾 Database
-- **MongoDB**
+   ```bash
+   npm install
+   ```
 
-### 🌐 Other Tools & Libraries
-- **Cloudinary** (for image uploads)
-- **Mongoose** (ODM for MongoDB)
-- **MVC Design Pattern**
-- **REST APIs**
-- **AJAX**
+3. **Environment** — Create `.env` in the project root:
 
----
+   | Variable | Description |
+   |----------|-------------|
+   | `ATLASDB_URL` | MongoDB connection string |
+   | `SECRET` | Session secret (also used by session store crypto) |
+   | `CLOUD_NAME` | Cloudinary cloud name |
+   | `CLOUD_API_KEY` | Cloudinary API key |
+   | `CLOUD_API_SECRET` | Cloudinary API secret |
 
-## 📁 Folder Structure
+4. **Run**
 
-```
-NamasteStay/
-├── controllers/        # Logic for handling requests
-├── models/             # Mongoose data models
-├── routes/             # Application routes
-├── views/              # EJS templates
-├── public/             # Static files (CSS, JS, Images)
-├── utils/              # Helper functions
-├── middleware.js       # Custom middleware
-├── cloudConfig.js      # Cloudinary configuration
-├── app.js              # Main application entry
-├── schema.js           # Validation schemas
-```
+   ```bash
+   node app.js
+   ```
+
+   App listens on **http://localhost:8080** (see `app.js`).
 
 ---
 
-## ✨ Key Features
+## Full documentation
 
-- 🌍 View hotel listings by location
-- 📸 Upload hotel images with Cloudinary
-- 🔍 Search and filter listings
-- 🔄 Asynchronous updates using AJAX
-- 🧱 MVC architecture for better code organization
-- 🧩 Modular route handling
+**[DOCUMENTATION.md](./DOCUMENTATION.md)** covers:
 
----
-
-## 🚀 Future Plans
-
-- User authentication & authorization (Login/Signup)
-- User reviews & star ratings
-- Admin dashboard for managing listings
-- Pagination & map integration
+- Architecture (MVC), folder structure, and tech stack  
+- Every route, controller, model, and middleware  
+- Validation, sessions, Passport auth, Cloudinary uploads  
+- Optional DB seeding (`init/`), deployment notes, and known quirks  
 
 ---
 
-## 📸 Screenshots
+## Tech stack (summary)
+
+| Area | Technologies |
+|------|----------------|
+| Backend | Node.js, Express |
+| Views | EJS, express-ejs-layouts, Bootstrap 5 |
+| Data | MongoDB, Mongoose |
+| Auth | Passport (local), express-session, connect-mongo |
+| Uploads | Multer, Cloudinary |
+
+---
+
+## Features
+
+- Listings CRUD with **image upload** (Cloudinary)  
+- **User signup / login / logout** (Passport local)  
+- **Reviews** with ratings; owners can delete their own reviews  
+- Listing **owners** can edit/delete only **their** listings  
+- Flash messages, server-side validation (Joi), centralized error page  
+
+---
+
+## Screenshots
 
 1. ![Screenshot 1](https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%20%201.png?raw=true)
 
@@ -91,18 +79,14 @@ NamasteStay/
 
 4. ![Screenshot 4](https://github.com/ShyamMohanvis/NamasteStay/blob/efecbab0b6c1ceba290711b1b8c174701a6d5ceb/Screenshot%204.png?raw=true)
 
+---
 
+## Contributing
 
-
-## 🤝 Contribution
-
-Contributions are welcome! Feel free to fork this repo and submit a pull request. Found a bug? Open an issue!
+Contributions are welcome. Fork the repo and open a pull request; use issues for bugs.
 
 ---
 
-## 📬 Contact
+## Author
 
-Made with ❤️ by **Shyam Mohan**  
-GitHub: [@ShyamMohanvis](https://github.com/ShyamMohanvis)
-
-
+**Shyam Mohan** — [GitHub @ShyamMohanvis](https://github.com/ShyamMohanvis)

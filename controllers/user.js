@@ -16,7 +16,8 @@ module.exports.signUp=async (req, res) => {
       console.log(registeredUser);
       req.login(registeredUser, (err) => {
         if (err) {
-          return next(err);
+          req.flash("error", err.message || "Login after signup failed.");
+          return res.redirect("/signup");
         }
         req.flash("success", "Welcome to NamasteStay!");
         res.redirect("/listings");

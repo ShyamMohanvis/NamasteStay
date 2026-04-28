@@ -29,12 +29,6 @@ const upload = multer({ storage });
   router.get("/:id", 
     wrapAsync(listingController.showListing));
   
-  // Create Route
-  router.post("/",isLoggedIn,
-    validateListing,
-    wrapAsync(listingController.createListing)
-  );
-  
   // Edit Route
   router.get("/:id/edit", 
    isLoggedIn,

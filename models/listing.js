@@ -22,9 +22,13 @@ const listingSchema = new Schema({
       ref: "Review",
     }
   ],
-  owner :{
-type:Schema.Types.ObjectId,
-ref:"User",
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
+  avgRating: {
+    type: Number,
+    default: 0,
   },
 });
 

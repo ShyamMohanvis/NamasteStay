@@ -1,11 +1,11 @@
-if (process.env.NODE_ENV !="production"){
-  require('dotenv').config();
+const path = require("path");
+if (process.env.NODE_ENV != "production") {
+  require("dotenv").config({ path: path.join(__dirname, ".env") });
 }
 
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const path = require("path");
 const methodOverride = require("method-override");
 const ExpressError =require("./utils/ExpressError.js");
 const listings=require("./routes/listing.js");
@@ -53,8 +53,8 @@ secret: process.env.SECRET,
 touchAfter: 24 * 3600,
 });
 
-store.on("error",() => {
-  console.log("ERROR IN MONGO SESSION STORE ",err);
+store.on("error", (err) => {
+  console.log("ERROR IN MONGO SESSION STORE", err);
 });
 
   const sessionOptions = {
