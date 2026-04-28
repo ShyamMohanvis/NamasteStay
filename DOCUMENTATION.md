@@ -44,7 +44,7 @@ This document describes **every major part** of the NamasteStay codebase: purpos
 
 There is no separate SPA: pages are rendered with **EJS** on the server.
 
-**Live demo (as referenced in the project):** [namastestay.onrender.com/listings](https://namastestay.onrender.com/listings)
+**Live demo (as referenced in the project):*
 
 ---
 
