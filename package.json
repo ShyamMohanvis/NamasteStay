@@ -1,7 +1,7 @@
 {
   "name": "majorproject",
   "version": "1.0.0",
-  "description": "NamasteStay accommodation listing web app",
+  "description": "NamasteStay accommodation listing web app. Live Demo: https://namastestay-qyfp.onrender.com",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

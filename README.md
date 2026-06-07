@@ -2,6 +2,8 @@
 
 **NamasteStay** is a full-stack **accommodation listing** web app: browse stays, create listings with photos, and leave reviews. Pages are rendered on the server with **EJS** (not a separate React frontend).
 
+🔗 **Live Demo:** [https://namastestay-qyfp.onrender.com](https://namastestay-qyfp.onrender.com)
+
 
 
 ---
