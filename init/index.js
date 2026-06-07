@@ -11,8 +11,11 @@ main()
     console.log(err);
   });
 
+const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "../.env") });
+
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/namastestay");
+  await mongoose.connect(process.env.ATLASDB_URL);
 }
 
 const initDB = async () => {

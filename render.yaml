@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: namastestay
+    env: node
+    buildCommand: npm install
+    startCommand: node app.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      # You will need to provide your MongoDB Atlas connection string in the Render dashboard
+      - key: MONGODB_URI
+        sync: false
+      # You will need to provide a secret key for session management
+      - key: SECRET
+        sync: false
+      - key: CLOUD_NAME
+        sync: false
+      - key: CLOUD_API_KEY
+        sync: false
+      - key: CLOUD_API_SECRET
+        sync: false
+      - key: MAP_TOKEN
+        sync: false

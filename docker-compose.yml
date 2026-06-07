@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+      - ATLASDB_URL=mongodb://mongo:27017/namastestay
+      - SECRET=namastestay-production-secret-change-me
+      - USE_CLOUDINARY=false
+    depends_on:
+      - mongo
+    volumes:
+      - app-uploads:/usr/src/app/public/uploads
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+  app-uploads:

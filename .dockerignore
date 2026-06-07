@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+.env
+.git
+.agent
+.github
+*.png
+*.webp
+C:*
+c:*
